@@ -5,7 +5,7 @@ metadata:
   labels:
     app: wisecow
 spec:
-  replicas: 2 # Hum do copies chalayenge redundancy ke liye
+  replicas: 2 
   selector:
     matchLabels:
       app: wisecow
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: wisecow-container
-        image: your-dockerhub-username/wisecow-app:latest # Tumhara Docker image yahan use hoga
+        image: udith1603/wisecow-app:latest 
         ports:
-        - containerPort: 4499 # App ka port
+        - containerPort: 4499 
