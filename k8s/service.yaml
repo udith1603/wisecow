@@ -7,6 +7,6 @@ spec:
     app: wisecow
   ports:
     - protocol: TCP
-      port: 80 # Is port par hum traffic lenge
-      targetPort: 4499 # App ka container port
+      port: 80 
+      targetPort: 4499 
   type: NodePort
