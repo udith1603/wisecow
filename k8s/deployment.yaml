@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wisecow-deployment
+  labels:
+    app: wisecow
+spec:
+  replicas: 2 # Hum do copies chalayenge redundancy ke liye
+  selector:
+    matchLabels:
+      app: wisecow
+  template:
+    metadata:
+      labels:
+        app: wisecow
+    spec:
+      containers:
+      - name: wisecow-container
+        image: your-dockerhub-username/wisecow-app:latest # Tumhara Docker image yahan use hoga
+        ports:
+        - containerPort: 4499 # App ka port
